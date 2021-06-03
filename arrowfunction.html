@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <script>
+
+        //normal function
+        document.write(demo())
+
+        function demo() {
+            return 2 * 3
+        }
+        document.write("<br>")
+
+
+        //arrow function
+
+        //define the function
+        const hello = () => {
+            return 5 * 4
+        }
+
+        //call the function
+        let x = hello()
+        document.write(x)
+
+        document.write("<br>")
+
+
+
+        //arrow function with only one statement
+
+        const demoFunction = () => ('Hello World')
+
+        document.write(demoFunction())
+
+        document.write("<br>")
+
+        
+
+        //arrow function with only one parameter
+
+        const myFunction = sometext => ("hello &nbsp;" + sometext)
+
+        //call the function
+        document.write(myFunction("world"))
+
+
+    </script>
+
+</body>
+
+</html>

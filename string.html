@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+
+</head>
+<body>
+    
+    <script>
+        const text="welcome to online class to read scripting language using javascript";
+        document.write(text+'<br>')
+        //to count the length of the string 
+        document.write(text.length)
+        document.write('<br>')
+        //to search a string position or find the string position
+        document.write(text.indexOf('to'))
+        document.write('<br>')
+        //to find the last occurance of repeated string
+        document.write(text.lastIndexOf('to'))
+        document.write('<br>')
+
+        //subscript ->string part of the string
+        document.write(text.substring(0,25)+'......')
+        document.write('<br>')
+
+        //slice,substr
+        //substr(10,5) ->it takes 5 character after the 10th position
+        document.write(text.substr(10,15)+'......')
+    </script>
+</body>
+</html> 

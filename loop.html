@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+
+<body>
+    <script>
+        //loop-> to exucute a code or statement number of times until the specified consition 
+        //types-> for loop, for in, for of, while, do while 
+
+        //for loop 
+
+        for (x = 1; x <= 30; x++) {
+            document.write(x + '&nbsp;')
+        }
+        document.write('<br>')
+
+        for (x = 30; x >= 1; x--)
+            document.write(x + '&nbsp')
+        document.write('<br>')
+
+        // let y=alpha;
+        for (y = 1; y <= 10; y++)
+            document.write("alpha" + '&nbsp')
+
+        // let a = prompt('enter any number to get its multiplication')
+        // for (b = 1; b <= 20; b++) {
+        //     document.write(a + '*' + b + '=' + a * b + '<br>')
+        // }
+
+        document.write('<br>')
+        //pyramid
+        
+        for (i = 1; i <= 5; i++) {
+            for (j = i; j <= 5; j++) {
+                document.write('&nbsp')
+            }
+            for (j = 1; j <= i; j++) {
+                document.write('*'+"&nbsp;")
+            }
+            for (j = 1; j <= i - 1; j++) {
+                document.write('&nbsp;')
+            }
+            document.write('<br>')
+        }
+
+
+        document.write('<br>')
+        for (i = 1; i <= 5; i++) {
+            for (j = 5; j >= i; j--) {
+                document.write('&nbsp')
+            }
+            for (k = 1; k <= i; k++) {
+                document.write('*')
+                document.write('&nbsp;')
+            }
+            document.write('<br>')
+        }
+
+
+        // document.write('<br>')
+        for (i = 5; i >= 1; i--) {
+            for (j = 5; j >= i; j--) {
+                document.write('&nbsp')
+            }
+            for (k = 1; k <= i; k++) {
+                document.write('*')
+                document.write('&nbsp;')
+            }
+            document.write('<br>')
+        }
+        document.write('<br>')
+
+
+        //break and continue
+        for(i=1;i<=30;i++){
+            if(i==20){
+                break
+            }
+            document.write(i+ '&nbsp;')
+        }
+        document.write('<br>')
+       
+        for(i=1;i<=30;i++){
+            if(i==20){
+                continue
+            }
+            document.write(i+ '&nbsp;')
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Slider</title>
+    <style>
+        .container {
+            height: 400px;
+            width: 700px;
+            margin: auto;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .left{
+            font-size: 40px;
+            border: none;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+        .right{
+            font-size: 40px;
+            border: none;
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+        button{
+        display: block;
+        }
+
+        .container:hover button{
+            display: block;
+        }
+
+        .container:hover{
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container" onmouseover="stops()" onmouseout="starts()">
+        <img src="images/black.jpeg" alt="black clover" id="image">
+        <button class="left" onclick="prev()">&lt;</button>
+        <button class="right" onclick="next()">&gt;</button>
+    </div>
+
+    <script>
+        const image_array = ['black.jpeg', 'download.jpeg', 'download1.jpeg', 'download3.jpeg', 'workplace.jpeg']
+        const array_length = image_array.length
+        let i = 0
+        let set = setInterval(demoFunction, 3000)
+        //demoFunction is a function 
+        //3000 3sec in millisec
+
+        function demoFunction() {
+            i++
+            i = i % array_length
+            document.getElementById('image').src = "images/" + image_array[i]
+        }
+        //i%array_length
+        // 0%5=0
+        // 1%5=1
+        // 2%5=2
+        // 3%5=3
+        // 4%5=4
+        // 5%5=0
+
+        function next() {
+            i++
+            i = i % array_length
+            document.getElementById('image').src = "images/" + image_array[i]
+        }
+
+        function prev() {
+            i--
+            if(i<0){
+                i=array_length-1
+            }
+            document.getElementById('image').src = "images/" + image_array[i]
+        }
+
+        function stops(){
+            clearInterval(set)
+        }
+
+        function starts(){
+            set=setInterval(demoFunction,3000)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+[A-Z]-> it checks alphabets from A to Z
+[a-z]-> it checks small case letter from a to z 
+[a-zA-Z]->  it checks both uppercase and lowercase letter from a to z 
+[0-9]-> it contains number from 0 to 9
+[a-z0-9]->it contains small case letter and number
+{min value,max value}->eg{8,20}
+
+fro special character use \
+eg for @ -> \@
+for . -> \.
+for # -> \#

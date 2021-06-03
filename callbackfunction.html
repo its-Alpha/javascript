@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Fnction</title>
+</head>
+<body>
+    
+    <p id="result"></p>
+
+    <script>
+        //callback function-> the function that called inside another function
+        //eg demoFunction(resultFunction)
+        //here demoFunction is function resultFunction is call inside demoFunction
+        //resultFunction is callback function and callback function has no parenthesis i.e.()
+
+
+        demoFunction(5,4,showResult)
+        //showResult is callback function
+
+        function demoFunction(x,y,callbackFunc){
+            let sum=x+y
+            callbackFunc(sum)
+        }
+        function showResult(resultvalue){
+            document.getElementById('result').innerHTML=resultvalue
+        }
+
+    </script>
+</body>
+</html>
